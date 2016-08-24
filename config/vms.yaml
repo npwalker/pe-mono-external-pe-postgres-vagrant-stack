@@ -9,7 +9,7 @@ vms:
 
   # NOTE: All `box:` declarations in this example point to vagrantcloud.com
   # and require Vagrant 1.5.0 or newer to function.
-  - name: split-master
+  - name: pe-mom
     box: puppetlabs/centos-6.6-64-nocm
     roles:
       - split_pe_conf
@@ -22,30 +22,6 @@ vms:
       - base
 
   - name: pe-postgres-node
-    box: puppetlabs/centos-6.6-64-nocm
-    roles:
-      - split_pe_conf
-      - blank_resolve_conf
-      - pe-forward-console
-      - pe-memory-tuning2
-      - el-stop-firewall
-      - el-fix-path
-      - 2gb-memory
-      - base
-
-  - name: split-console
-    box: puppetlabs/centos-6.6-64-nocm
-    roles:
-      - split_pe_conf
-      - blank_resolve_conf
-      - pe-forward-console
-      - pe-memory-tuning2
-      - el-stop-firewall
-      - el-fix-path
-      - 2gb-memory
-      - base
-
-  - name: split-puppetdb
     box: puppetlabs/centos-6.6-64-nocm
     roles:
       - split_pe_conf
