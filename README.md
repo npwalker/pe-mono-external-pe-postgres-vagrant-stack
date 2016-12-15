@@ -11,7 +11,7 @@ Once the pe-postgres-node is installed then you can complete installation on pe-
 ```
 vagrant up pe-mom;
 vagrant up pe-postgres-node;
-vagrant ssh pe-mom -c "sudo su - -c 'puppet enterprise configure; puppet agent -t;'"
-vagrant ssh pe-postgres-node -c "sudo su - -c 'puppet enterprise configure; puppet agent -t;'"
+vagrant ssh pe-mom -c "sudo su - -c 'puppet infrastructure configure; puppet agent -t;'"
+vagrant ssh pe-postgres-node -c "sudo su - -c 'puppet infrastructure configure; puppet agent -t;'"
 ```
 
